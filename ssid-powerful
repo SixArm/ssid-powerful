@@ -98,8 +98,7 @@ init(){
 }
 
 query(){
-  awk '$0 == $line' "$data" > "$tmp" && mv "$tmp" "$data"
-  grep -qFxm1 "$1" "$data"
+  grep -qFxm1 "$1" "$(cfg_dat)"
 }
 
 add(){
